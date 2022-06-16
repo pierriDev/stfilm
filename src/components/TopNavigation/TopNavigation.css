@@ -1,0 +1,90 @@
+.headerBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 25px 35px;
+    align-items: center;
+    z-index: 100;
+}
+
+.headerSection{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.headerNav{
+    padding-left: 100px;
+}
+
+.logoLink{
+    cursor: pointer;
+}
+
+.headerLink{
+    display: flex;
+    margin: 0 12px;
+    cursor: pointer;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+}
+
+.headerLink__text{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.headerLink__text:hover{
+    color: #FAA61C;
+}
+
+.cartBackground{
+    margin-right: 45px;
+    background-color: #D9D9D9;
+    border-radius: 100%;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+    font-size: 32px;
+}
+
+.cartBackground:hover{
+    background-color: #FAA61C;
+}
+
+.cartQuantity{
+    background-color: #FAA61C;
+    border-radius: 100%;
+    padding: 5px 15px;
+    position: absolute;
+    top: -25px;
+    left: 20px;
+}
+
+.loginButton{
+    padding: 0 30px;
+    font-size: 24px;
+    text-align: center;
+    background-color: #FAA61C;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 54px;
+    height: 30px;
+    box-shadow: 1px 1px 10px 1px rgb(250 156 0 / 75%);
+    color: white
+}
+
+.loginButton:hover{
+    color: #FAA61C;
+    background-color: white;
+    box-shadow: 1px 1px 10px 1px rgb(255 255 255 / 75%);
+
+}
