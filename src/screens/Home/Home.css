@@ -4,12 +4,13 @@
 }
 
 .section{
-  padding: 0 30px;
+  padding: 45px 30px;
 }
 
 .banner{
   background: radial-gradient(65.97% 50% at 47.36% 50%, #444675 0%, #111223 100%);
   padding-top: 200px;
+  padding-bottom: 0;
 }
 
 .bannerLine{
@@ -49,6 +50,7 @@
   text-transform: uppercase;
   top: 0;
   margin: 0;
+  font-family: 'Montserrat';
 }
 
 .bannerSubtitle{
@@ -62,6 +64,7 @@
   bottom: -10px;
   letter-spacing: 20px;
   left: 300px;
+  font-family: 'Montserrat';
 }
 
 .bannerSubtitle:after {
@@ -96,10 +99,10 @@
   color: white;
   font-weight: 700;
   margin: 0 15px;
+  font-family: 'Montserrat';
 }
 
 .highlights{
-  padding-top: 45px;
   background-color: white;
 }
 
@@ -109,4 +112,243 @@
   color: #434343;
   font-size: 40px;
   font-weight: 700;
+  font-family: 'Montserrat';
+}
+
+.highlights__box{
+  padding: 0 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 76px;
+
+}
+.highlights__box--card{
+  width: 50%;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  cursor: pointer;
+}
+.highlights__box--card--imagem{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.highlights__box--card--imagem--box{
+  max-width: 187px;
+  max-height: 187px;
+}
+.highlights__box--card--imagem--box--img{
+  width: 100%;
+  height: 100%;
+}
+.highlights__box--card--info{
+  width: 70%;
+}
+.highlights__box--card--info--category{
+  color: #434343;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  font-family: 'Montserrat';
+}
+.highlights__box--card--info--title{
+  color: #434343;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 20px;
+  font-family: 'Montserrat';
+}
+.highlights__box--card--info--value{
+  color: #FAA61C;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 20px;
+  font-family: 'Montserrat';
+}
+
+.products{
+  background-color: #D9D9D9;
+}
+.products__box{
+  display: flex;
+}
+.product__box--filter{
+  width: 30%;
+  padding-right: 15px;
+}
+.product__box--content{
+  width: 70%;
+}
+.product__box--content--title{
+  padding-left: 15px;
+  margin: 0;
+  color: #434343;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  font-family: 'Montserrat';
+}
+.product__box--content--counter{
+  padding-left: 15px;
+  margin: 0;
+  margin-top: 10px;
+  color: #434343;
+  font-size: 14px;
+  font-family: 'Montserrat';
+}
+.product__box--content--box{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.product__box--content--box--element{
+  width: 20%;
+  padding: 15px;
+  cursor: pointer;
+}
+.product__box--content--box--element--image{
+  max-width: 170px;
+  max-height: 170px;
+}
+.product__box--content--box--element--image--img{
+  width: 100%;
+  height: 100%;
+}
+.product__box--content--box--element--title{
+  margin: 0;
+  font-size: 18px;
+  color: black;
+  font-weight: 500;
+  font-family: 'Montserrat';
+}
+.product__box--content--box--element--value{
+  margin: 0;
+  font-size: 24px;
+  color: black;
+  font-weight: 800;
+  font-family: 'Montserrat';
+}
+
+/* MOBILE */
+@media (max-width: 1024px) {
+  .section{
+    width: 100%;
+  }
+  .bannerSmall{
+    display: none;
+  }
+  .bannerBig{
+    width: 100%;
+  }
+  .highlights__box{
+    flex-wrap: wrap;
+  }
+  .highlights__box--card{
+    width: 50%;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  .highlights__box--card--imagem{
+    width: 100%;
+  }
+  .highlights__box--card--imagem--box{
+    max-width: unset;
+    max-height: unset;
+  }
+  .highlights__box--card--info{
+    width: 100%;
+  }
+  .highlights__box--card--info--category{
+    text-align: center;
+  }
+  .highlights__box--card--info--title{
+    text-align: center;
+  }
+  .highlights__box--card--info--value{
+    text-align: center;
+  }
+
+  .products__box{
+    flex-wrap: wrap;
+  }
+  .product__box--filter{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .product__box--content{
+    width: 100%;
+  }
+  .product__box--content--box--element{
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+ 
+}
+
+/* ONLY CLLPHONE */
+
+@media (max-width: 724px) {
+  .bannerImage{
+    max-width: 100%;
+  }
+  .highlights__box{
+    flex-wrap: wrap;
+  }
+  .highlights__box--card{
+    width: 100%;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  .highlights__box--card--imagem{
+    width: 100%;
+  }
+  .highlights__box--card--imagem--box{
+    max-width: unset;
+    max-height: unset;
+  }
+  .highlights__box--card--info{
+    width: 100%;
+  }
+  .highlights__box--card--info--category{
+    text-align: center;
+  }
+  .highlights__box--card--info--title{
+    text-align: center;
+  }
+  .highlights__box--card--info--value{
+    text-align: center;
+  }
+
+  .products__box{
+    flex-wrap: wrap;
+  }
+  .product__box--filter{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .product__box--content{
+    width: 100%;
+  }
+  .product__box--content--box{
+    margin-top: 45px;
+  }
+  .product__box--content--box--element{
+    width: 100%;
+  }
+  .product__box--content--box--element--title{
+    margin-top: 15;
+    text-align: center;
+  }
+  .product__box--content--box--element--image{
+    max-width: unset;
+    max-height: unset;
+  }
 }

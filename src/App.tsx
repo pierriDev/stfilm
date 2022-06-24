@@ -1,8 +1,11 @@
 import Navigation from "./navigation/Nav"
-
-function App() {
+import { queryClient } from "./api/queryClient"
+import { QueryClientProvider } from "react-query";
+const App = () => {
   return (
-    <Navigation />
+    <QueryClientProvider client={queryClient}>
+      <Navigation />
+    </QueryClientProvider>
   );
 }
 
