@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <>
     
-      <TopNavigation /> 
+      <TopNavigation isHome/>
       <div className='body'>
         {/* MAKE THIS A SLIDER LATER */}
         <div className='banner section'>
@@ -112,7 +112,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Footer /> 
+      <Footer />
 
     </>
     
