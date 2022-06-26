@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
-export const useTopNavigation = () => {
+export const useTopNavigation = (isHome: boolean) => {
     const [backgroundColor, setBackgroundColor] = useState('transparent')
-    const [firstTextColor, setFirstTextColor] = useState('white')
-    const [secondTextColor, setSecondTextColor] = useState('white')
-    const [thirdTextColor, setThirdTextColor] = useState('white')
-    const [fourthTextColor, setFourthTextColor] = useState('white')
-    const [fifthTextColor, setFifthTextColor] = useState('white')
+    const [firstTextColor, setFirstTextColor] = useState("white")
+    const [secondTextColor, setSecondTextColor] = useState("white")
+    const [thirdTextColor, setThirdTextColor] = useState("white")
+    const [fourthTextColor, setFourthTextColor] = useState("white")
+    const [fifthTextColor, setFifthTextColor] = useState("white")
 
     const [firstHover, setFirstHover] = useState(false)
     const [secondHover, setSecondHover] = useState(false)
@@ -18,6 +18,17 @@ export const useTopNavigation = () => {
         window.addEventListener('scroll', listenScrollEvent)
     })
 
+    useEffect(()=> {
+        if(!isHome){
+            setFirstTextColor("black")
+            setSecondTextColor("black")
+            setThirdTextColor("black")
+            setFourthTextColor("black")
+            setFifthTextColor("black")
+        }
+    },[isHome])
+
+    
     const listenScrollEvent = (e: any) => {
         if (window.scrollY > 10) {
             setBackgroundColor("white")
@@ -27,12 +38,21 @@ export const useTopNavigation = () => {
             setFourthTextColor("black")
             setFifthTextColor("black")
         } else {
-            setBackgroundColor("transparent")
-            setFirstTextColor("white")
-            setSecondTextColor("white")
-            setThirdTextColor("white")
-            setFourthTextColor("white")
-            setFifthTextColor("white")
+            if(isHome){
+                setBackgroundColor("transparent")
+                setFirstTextColor("white")
+                setSecondTextColor("white")
+                setThirdTextColor("white")
+                setFourthTextColor("white")
+                setFifthTextColor("white")
+            }else{
+                setBackgroundColor("transparent")
+                setFirstTextColor("black")
+                setSecondTextColor("black")
+                setThirdTextColor("black")
+                setFourthTextColor("black")
+                setFifthTextColor("black")
+            }
         }
     }
 
@@ -43,7 +63,11 @@ export const useTopNavigation = () => {
             if (window.scrollY > 10) {
                 setFirstTextColor("black")
             } else {
-                setFirstTextColor("white")
+                isHome ?
+                    setFirstTextColor("white")
+                :
+                    setFirstTextColor("black")
+
             }
         }
     },[firstHover])
@@ -55,7 +79,10 @@ export const useTopNavigation = () => {
             if (window.scrollY > 10) {
                 setSecondTextColor("black")
             } else {
-                setSecondTextColor("white")
+                isHome ?
+                    setSecondTextColor("white")
+                :
+                    setSecondTextColor("black")
             }
         }
     },[secondHover])
@@ -67,7 +94,10 @@ export const useTopNavigation = () => {
             if (window.scrollY > 10) {
                 setThirdTextColor("black")
             } else {
-                setThirdTextColor("white")
+                isHome ?
+                    setThirdTextColor("white")
+                :
+                    setThirdTextColor("black")
             }
         }
     },[thirdHover])
@@ -79,7 +109,10 @@ export const useTopNavigation = () => {
             if (window.scrollY > 10) {
                 setFourthTextColor("black")
             } else {
-                setFourthTextColor("white")
+                isHome ?
+                    setFourthTextColor("white")
+                :
+                    setFourthTextColor("black")
             }
         }
     },[fourthHover])
@@ -91,7 +124,10 @@ export const useTopNavigation = () => {
             if (window.scrollY > 10) {
                 setFifthTextColor("black")
             } else {
-                setFifthTextColor("white")
+                isHome ?
+                    setFifthTextColor("white")
+                :
+                    setFifthTextColor("black")
             }
         }
     },[fifthHover])

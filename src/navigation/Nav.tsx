@@ -6,11 +6,13 @@ import {
   Link,
 } from 'react-router-dom';
 import Home from "../screens/Home/Home" 
+import About from "../screens/About/About" 
 
 const Navigation = () => (
     <Router>
         <Routes>
             <Route path='/' element={<Home/>} />
+            <Route path='/empresa' element={<About/>} />
         </Routes>
     </Router>
 )
