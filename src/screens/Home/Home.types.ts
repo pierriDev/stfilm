@@ -29,7 +29,7 @@ export type HighlightType = {
 }
 
 export type ProductType = {
-    id: 1,
+    id: number,
     title: string,
     image: string | null,
     description: string,

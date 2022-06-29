@@ -6,8 +6,11 @@ import { useHomeScreen } from './Home.functions';
 import { formatNumber } from '../../utils/numberUtils';
 import './Home.css';
 
-import TopNavigation from '../../components/TopNavigation/TopNavigation';
+import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import Footer from '../../components/Footer/Footer';
+import TopNavigation from '../../components/TopNavigation/TopNavigation';
+import Product from '../../components/Product/Product';
 
 import bannerFirstImage from "../../assets/img_car.png";
 import bannerSecondImage from "../../assets/img_car2.png";
@@ -32,13 +35,17 @@ const Home = () => {
         <div className='banner section'>
           <div className='bannerLine'>
             <div className='bannerSmall'> 
-              L 
+              <a className='bannerIcon'>
+                <FaArrowLeft />
+              </a>
             </div>
             <div className='bannerBig'>
               <img src={bannerFirstImage} className="bannerImage"/>
             </div>
             <div className='bannerSmall bannerRight'>
-              R 
+              <a className='bannerIcon'>
+                <FaArrowRight />
+              </a>
             </div>
           </div>
           <div className='bannerLine bannerFooter'>
@@ -74,6 +81,7 @@ const Home = () => {
                         <h2 className='highlights__box--card--info--value'>{formatNumber(product.value, true )}</h2>
                       </div>
                     </a>
+                    
                 ) )}
               </div>
           }
@@ -85,24 +93,19 @@ const Home = () => {
             FILTRO
           </div>
           <div className='product__box--content'>
-            <h1 className='product__box--content--title'>Todos os Produtos</h1>
+            <h1 className='product__box--content--title'>Produtos</h1>
             {
               !isLoadingProduct ?
                 <>
                   <h4 className='product__box--content--counter'>Exibindo 10 de {productData?.length} resultados</h4>
                   <div className='product__box--content--box'>
                     {productData?.map((product: ProductType) => (
-                      <a className='product__box--content--box--element' key={product.id}>
-                        <div className='product__box--content--box--element--image'>
-                          <img src={secondPlaceholder} className="product__box--content--box--element--image--img"/>
-                        </div>
-                        <h1 className='product__box--content--box--element--title'>
-                          {product.title}
-                        </h1>
-                        <h2 className='product__box--content--box--element--value'>
-                          {formatNumber(product.value, true )}
-                        </h2>
-                      </a>
+                      <Product
+                        id={product.id}
+                        image={placeholder}
+                        title={product.title}
+                        value={product.value}
+                      />
                     ) )}
                   </div>
                 </>

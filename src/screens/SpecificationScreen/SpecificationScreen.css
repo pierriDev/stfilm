@@ -1,0 +1,11 @@
+.specificationSection{
+    padding: 200px 215px 0 215px!important;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 1024px) {
+    .specificationSection{
+        padding: 45px 15px !important;
+        margin-bottom: 50px;
+    }
+}
