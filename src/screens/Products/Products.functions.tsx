@@ -1,12 +1,9 @@
-import { useHighlights, useProducts } from "../../api/products/hooks";
-import { useCategories } from "../../api/categories/hooks"
 import { useEffect, useState } from "react";
-import type { UseProductType } from "../../api/products/types";
-import { ProductType } from "./Home.types";
-
-export const useHomeScreen = () => {
-    
-    const {data: highLightData, isLoading: isLoadingHighlights } = useHighlights();
+import { useCategories } from "../../api/categories/hooks";
+import { useProducts } from "../../api/products/hooks";
+import { UseProductType } from "../../api/products/types";
+import { ProductType } from "../Home/Home.types";
+export const useProductsScreen = () => {
     const {data: productData, isLoading: isLoadingProduct} = useProducts();
     const {data: categoriesData, isLoading: isLoadingCategories} = useCategories();
 
@@ -57,15 +54,13 @@ export const useHomeScreen = () => {
     }
 
     return {
-        highLightData,
-        isLoadingHighlights,
-        products,
         isLoadingProduct,
         categoriesData,
         isLoadingCategories,
-        handleCategoryPress,
+        products,
         onInputChange,
         handleSearchPress,
+        handleCategoryPress,
         productSearch
     }
 }

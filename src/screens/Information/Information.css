@@ -1,0 +1,152 @@
+.imageSection{
+    padding: 200px 100px 0 100px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imageSection__img{
+    max-width: 826px;
+    max-height: 826px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.infoRow{
+    display: flex;
+    padding: 0 150px;
+    margin-top: 100px;
+    /* justify-content: space-between; */
+}
+.informationBox{
+    width: 50%;
+    padding: 0 50px;
+}
+.infoCard{
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.infoCard__left{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoCard__right{
+    width: 85%;
+}
+.infoCard__title{
+    margin: 0;
+    font-family: 'Montserrat';
+    font-size: 32px;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.infoCard__subtitle{
+    margin: 0;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #434343;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.infoCard__text{
+    margin: 0;
+    margin: 0;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #434343;
+    font-weight: 300;
+}
+
+.infoCard__img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.infoCard__date{
+    margin: 0;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #434343;
+    font-weight: 600;
+}
+.infoHalf{
+    width: 50%;
+}
+.infoHalf__img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.infoHalf__subtitle{
+    margin: 0;
+    font-family: 'Montserrat';
+    font-size: 32px;
+    color: #434343;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.infoHalf__title{
+    margin: 0;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.infoHalf__text{
+    margin: 0;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #434343;
+    font-weight: 300;
+}
+.infoHalf__iconBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.infoHalf__icon{
+    text-align: center;
+    font-size: 64px;
+    color: #FAA61C;
+}
+.infoHalf__icon:hover{
+    color: #434343;
+}
+
+/* ONLY CLLPHONE */
+@media (max-width: 724px) {
+    .imageSection {
+        padding: 0 15px !important;
+    }
+    .informationBox{
+        padding: 0;
+        margin: 30px 0;
+    }
+    .infoSection{
+        padding: 0 15px;
+    }
+    .infoRow{
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .informationBox{
+        width: 100%;
+    }
+    .infoCard__left{
+        display: none;
+    }
+    .infoCard__right{
+        width: 100%;
+    }
+    .infoHalf{
+        width: 100%;
+    }
+    .infoHalf__img{
+        display: none;
+    }
+}

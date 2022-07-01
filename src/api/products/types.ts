@@ -32,7 +32,7 @@ export type UseHighlightsType = [
 
 export type UseProductType = [
     {
-		id: 1,
+		id: number,
         title: string,
         image: string | null,
         description: string,

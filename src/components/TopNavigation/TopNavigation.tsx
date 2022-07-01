@@ -9,6 +9,8 @@ import { website } from "../../constants/endpoints";
 
 import type { TopNavigationType } from "./TopNavigation.types";
 
+import { FaShoppingCart } from "react-icons/fa";
+
 const TopNavigation = ({
     isLoggedIn = false,
     isHome = false,
@@ -45,22 +47,24 @@ const TopNavigation = ({
                         <a className="headerLink__text" style={{color: firstTextColor}} onMouseEnter={toogleFirstHover} onMouseLeave={toogleFirstHover} href={`${website}/empresa`}>Empresa</a>
                     </div>
                     <div className="headerLink">
-                        <a className="headerLink__text" style={{color: secondTextColor}} onMouseEnter={toogleSecondHover} onMouseLeave={toogleSecondHover}>Como Comprar</a>
+                        <a className="headerLink__text" style={{color: secondTextColor}} onMouseEnter={toogleSecondHover} onMouseLeave={toogleSecondHover} href={`${website}/como-comprar`}>Como Comprar</a>
                     </div>
                     <div className="headerLink">
-                        <a className="headerLink__text" style={{color: thirdTextColor}} onMouseEnter={toogleThirdHover} onMouseLeave={toogleThirdHover}>Produtos</a>
+                        <a className="headerLink__text" style={{color: thirdTextColor}} onMouseEnter={toogleThirdHover} onMouseLeave={toogleThirdHover} href={`${website}/produtos`}>Produtos</a>
                     </div>
                     <div className="headerLink">
-                        <a className="headerLink__text" style={{color: fourthTextColor}} onMouseEnter={toogleFourthHover} onMouseLeave={toogleFourthHover}>Especificações</a>
+                        <a className="headerLink__text" style={{color: fourthTextColor}} onMouseEnter={toogleFourthHover} onMouseLeave={toogleFourthHover} href={`${website}/especificacao`}>Especificações</a>
                     </div>
                     <div className="headerLink">
-                        <a className="headerLink__text" style={{color: fifthTextColor}} onMouseEnter={toogleFifthHover} onMouseLeave={toogleFifthHover}>Contato</a>
+                        <a className="headerLink__text" style={{color: fifthTextColor}} onMouseEnter={toogleFifthHover} onMouseLeave={toogleFifthHover} href={`${website}/contato`}>Contato</a>
                     </div>
                 </div>
                 <div className="headerSection">
                     <div className="cartBackground">
                         <div className="cartQuantity"><span>0</span></div>
-                        <a>C</a>
+                        <a className="cardButton">
+                            <FaShoppingCart />
+                        </a>
                     </div>
                     <a className="loginButton">Entrar</a>
                 </div>
