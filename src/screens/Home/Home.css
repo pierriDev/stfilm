@@ -186,11 +186,63 @@ a{
   display: flex;
 }
 .product__box--filter{
-  width: 20%;
-  padding-right: 15px;
+  width: 15%;
+  padding: 0 15px;
+}
+
+.product__box--filter--search{
+  padding: 10px 2px;
+  background-color: transparent;
+  border: 2px solid #434343;
+  border-radius: 5px;
+  color: #434343;
+  width: 100%;
+}
+.product__box--filter--button{
+  margin-top: 12px;
+  border-radius: 5px;
+  width: 100%;
+}
+.product__box--filter--btn{
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: #FAA61C;
+  color: black;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+}
+.product__box--filter--title{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  border-bottom: 2px solid black;
+  text-align: center;
+  padding-bottom: 5px;
+  margin: 15px 0;
+}
+.product__box--filter--category{
+  width: 100%;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ADADAD;
+  padding-bottom: 10px;
+
+}
+.product__box--filter--category--btn{
+  padding: 0 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #434343;
 }
 .product__box--content{
-  width: 80%;
+  width: 85%;
 }
 .product__box--content--title{
   padding-left: 15px;

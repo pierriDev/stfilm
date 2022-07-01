@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import type { HighlightType, ProductType } from './Home.types';
+import type { HighlightType, ProductType, CategoryType } from './Home.types';
 import { useHomeScreen } from './Home.functions';
 import { formatNumber } from '../../utils/numberUtils';
 import './Home.css';
@@ -11,6 +11,7 @@ import { FaArrowRight } from "react-icons/fa";
 import Footer from '../../components/Footer/Footer';
 import TopNavigation from '../../components/TopNavigation/TopNavigation';
 import Product from '../../components/Product/Product';
+import Filter from '../../components/Filter/Filter';
 
 import bannerFirstImage from "../../assets/img_car.png";
 import bannerSecondImage from "../../assets/img_car2.png";
@@ -23,8 +24,14 @@ const Home = () => {
   const {
     highLightData,
     isLoadingHighlights,
-    productData,
+    products,
     isLoadingProduct,
+    categoriesData,
+    isLoadingCategories,
+    handleCategoryPress,
+    onInputChange,
+    handleSearchPress,
+    productSearch
   } = useHomeScreen();
   return (
     <>
@@ -90,16 +97,30 @@ const Home = () => {
       <div className='products section'>
         <div className='products__box'>
           <div className='product__box--filter'>
-            FILTRO
+            <div className='product__box--filter--form'>
+              <input type="text" className='product__box--filter--search' name='searchValue' value={productSearch} placeholder="Pesquisar Produtos" onChange={onInputChange}/>
+            </div>
+            <div className='product__box--filter--button'>
+
+              <button className='product__box--filter--btn' onClick={() => {handleSearchPress()}}>Pesquisar</button>
+            </div>
+            <h1 className='product__box--filter--title'>Categorias de Produtos</h1>
+            {
+              !isLoadingCategories && (
+                categoriesData?.map((category: CategoryType) => (
+                  <Filter title={category.title} handleCategoryPress={handleCategoryPress}/>
+                ))
+              )
+            }
           </div>
           <div className='product__box--content'>
             <h1 className='product__box--content--title'>Produtos</h1>
             {
               !isLoadingProduct ?
                 <>
-                  <h4 className='product__box--content--counter'>Exibindo 10 de {productData?.length} resultados</h4>
+                  <h4 className='product__box--content--counter'>Exibindo 10 de {products?.length} resultados</h4>
                   <div className='product__box--content--box'>
-                    {productData?.map((product: ProductType) => (
+                    {products?.map((product: ProductType) => (
                       <Product
                         id={product.id}
                         image={placeholder}

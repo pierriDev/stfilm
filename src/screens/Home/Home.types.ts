@@ -48,3 +48,12 @@ export type ProductType = {
         updated_at: Date | null
     }
 }
+
+export type CategoryType = {
+    id: number,
+    title: string,
+    description: string,
+    image: string | null,
+    created_at: Date | null,
+    updated_at: Date | null
+}
