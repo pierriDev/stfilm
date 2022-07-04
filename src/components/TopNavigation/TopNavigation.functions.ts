@@ -14,6 +14,8 @@ export const useTopNavigation = (isHome: boolean) => {
     const [fourthHover, setFourthHover] = useState(false)
     const [fifthHover, setFifthHover] = useState(false)
 
+    const [isLogoFull, setIsLogoFull] = useState(false)
+
     useEffect(()=> {
         window.addEventListener('scroll', listenScrollEvent)
     })
@@ -25,6 +27,7 @@ export const useTopNavigation = (isHome: boolean) => {
             setThirdTextColor("black")
             setFourthTextColor("black")
             setFifthTextColor("black")
+            setIsLogoFull(true)
         }
     },[isHome])
 
@@ -37,6 +40,7 @@ export const useTopNavigation = (isHome: boolean) => {
             setThirdTextColor("black")
             setFourthTextColor("black")
             setFifthTextColor("black")
+            setIsLogoFull(true)
         } else {
             if(isHome){
                 setBackgroundColor("transparent")
@@ -45,6 +49,7 @@ export const useTopNavigation = (isHome: boolean) => {
                 setThirdTextColor("white")
                 setFourthTextColor("white")
                 setFifthTextColor("white")
+                setIsLogoFull(false)
             }else{
                 setBackgroundColor("transparent")
                 setFirstTextColor("black")
@@ -52,6 +57,7 @@ export const useTopNavigation = (isHome: boolean) => {
                 setThirdTextColor("black")
                 setFourthTextColor("black")
                 setFifthTextColor("black")
+                setIsLogoFull(true)
             }
         }
     }
@@ -167,5 +173,6 @@ export const useTopNavigation = (isHome: boolean) => {
         toogleThirdHover,
         toogleFourthHover,
         toogleFifthHover,
+        isLogoFull
     }
 }

@@ -4,6 +4,7 @@ import { useTopNavigation } from "./TopNavigation.functions";
 import './TopNavigation.css';
 
 import logo from "../../assets/logo_simple.png"
+import logoFull from "../../assets/logo_full.png"
 
 import { website } from "../../constants/endpoints";
 
@@ -27,6 +28,7 @@ const TopNavigation = ({
         toogleThirdHover,
         toogleFourthHover,
         toogleFifthHover,
+        isLogoFull,
     } = useTopNavigation(isHome);
 
     
@@ -39,7 +41,7 @@ const TopNavigation = ({
             <div className="headerBox" style={ isHome? {backgroundColor: backgroundColor} : {backgroundColor: "white"}}>
                 <div className="headerSection">
                     <a className="logoLink" href={website}>
-                        <img src={logo}/>
+                        <img src={!isLogoFull ? logo : logoFull}/>
                     </a>
                 </div>
                 <div className="headerSection headerNav">
