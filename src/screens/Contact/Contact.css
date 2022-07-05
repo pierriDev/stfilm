@@ -1,0 +1,174 @@
+.contactSection{
+    padding: 200px 30px 0 30px !important;
+}
+.contact__box{
+    padding: 0 80px;
+    display: flex;
+    margin-bottom: 80px;
+}
+.contact__box--half{
+    width: 50%;
+    padding: 0 30px;
+}
+.contact__box--subtitle{
+    margin: 0;
+    font-family: 'Montserrat';
+    color: #434343;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+.contact__box--title{
+    margin: 0;
+    font-family: 'Montserrat';
+    color: black;
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.contact__box--info{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.contact__box--info--subtitle{
+    margin: 0;
+    font-family: 'Montserrat';
+    color: #434343;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.contact__box--info--text{
+    margin: 0;
+    font-family: 'Montserrat';
+    color: #000;
+    font-weight: 300;
+    font-size: 20px;
+}
+.contact__box--inputBox{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.contact__box--buttonBox{
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+.contact__box--input{
+    border: 0;
+    width: 100%;
+    color: #434343;
+    padding: 10px 2px;
+    border-bottom: 2px solid #434343;
+    background-color: transparent;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 24px;
+}
+.contact__box--textarea{
+    border: 0;
+    width: 100%;
+    color: #434343;
+    padding: 10px 5px;
+    border: 2px solid #434343;
+    background-color: transparent;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 24px;
+    height: 214px;
+}
+.contact__box--btn{
+    background-color: #FAA61C;
+    color: white;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 54px;
+}
+.contact__box--btn:hover{
+    background-color: #434343;
+}
+.contact__banner{
+    width: 100%;
+    padding: 80px 0;
+    position: relative;
+}
+.contact__banner--img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contact__banner--txt{
+    font-family: 'Montserrat';
+    position: absolute;
+    bottom: 95px;
+    right: 15px;
+    letter-spacing: 0.43em;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 79.02%;
+    margin: 0;
+    color: #FFF;
+    text-transform: uppercase;
+}
+.contact__banner--txt:before {
+    content: "";
+    display: block;
+    width: 242px;
+    height: 3px;
+    background: #FFF;
+    right: 0;
+    top: -30px;
+    position: absolute;
+}
+.contact__row{
+    display: flex;
+    justify-content: space-between;
+}
+.contact__col{
+    width: 33%;
+    padding: 10px 50px;
+}
+.contact__col--title{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: #000;
+    font-size: 32px;
+    text-align: center;
+}
+.contact__col--txt{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #434343;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* ONLY CLLPHONE */
+
+@media (max-width: 724px) {
+    .contactSection {
+        padding: 0 15px !important;
+    }
+    .contactRowSection{
+        padding: 0 15px !important;
+    }
+    .contact__box{
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    .contact__box--half{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+    .contact__row{
+        flex-wrap: wrap;
+    }
+    .contact__col{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+}

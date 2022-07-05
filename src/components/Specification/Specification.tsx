@@ -6,6 +6,7 @@ import "./Specification.css"
 const Specification = ({
     title,
     text,
+    openModal,
 }: SpecificationType) => {
     return (
         <div className="specificicationBox">
@@ -16,7 +17,7 @@ const Specification = ({
                 <h1 className="specificationTitle">{title}</h1>
                 <p className="specificationText">{text}</p>
                 <div className="specificationButton">
-                    <a className="specificationBtn">
+                    <a className="specificationBtn" onClick={() => openModal()}>
                         Certificado de Garantia
                     </a>
                 </div>

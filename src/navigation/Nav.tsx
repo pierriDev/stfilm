@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import About from "../screens/About/About" 
+import ContactScreen from "../screens/Contact/Contact" 
 import Home from "../screens/Home/Home" 
 import Information from "../screens/Information/Information" 
 import Products from "../screens/Products/Products" 
@@ -22,6 +23,7 @@ const Navigation = () => (
             <Route path='/como-comprar' element={<Information/>} />
             <Route path='/produtos' element={<Products/>} />
             <Route path='/especificacao' element={<SpecificationScreen/>} />
+            <Route path='/contato' element={<ContactScreen/>} />
         </Routes>
     </Router>
 )
