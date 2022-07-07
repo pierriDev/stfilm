@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import About from "../screens/About/About" 
+import CartScreen from "../screens/CartScreen/CartScreen" 
 import ContactScreen from "../screens/Contact/Contact" 
 import Home from "../screens/Home/Home" 
 import Information from "../screens/Information/Information" 
@@ -24,6 +25,7 @@ const Navigation = () => (
             <Route path='/produtos' element={<Products/>} />
             <Route path='/especificacao' element={<SpecificationScreen/>} />
             <Route path='/contato' element={<ContactScreen/>} />
+            <Route path='/carrinho' element={<CartScreen/>} />
         </Routes>
     </Router>
 )

@@ -1,11 +1,16 @@
 import Navigation from "./navigation/Nav"
 import { queryClient } from "./api/queryClient"
 import { QueryClientProvider } from "react-query";
+import context from "./context/AppContext";
+import { Provider } from 'react-redux';
+
 const App = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Navigation />
-    </QueryClientProvider>
+    <Provider store={context}>
+      <QueryClientProvider client={queryClient}>
+        <Navigation />
+      </QueryClientProvider>
+    </Provider>
   );
 }
 

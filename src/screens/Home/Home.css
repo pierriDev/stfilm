@@ -241,6 +241,9 @@ a{
   font-size: 14px;
   color: #434343;
 }
+.product__box--filter--category--btn:hover{
+  color: #FAA61C;
+}
 .product__box--content{
   width: 85%;
 }

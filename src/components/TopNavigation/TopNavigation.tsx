@@ -3,6 +3,8 @@ import React from "react"
 import { useTopNavigation } from "./TopNavigation.functions";
 import './TopNavigation.css';
 
+import Cart from "../Cart/Cart"
+
 import logo from "../../assets/logo_simple.png"
 import logoFull from "../../assets/logo_full.png"
 
@@ -10,7 +12,6 @@ import { website } from "../../constants/endpoints";
 
 import type { TopNavigationType } from "./TopNavigation.types";
 
-import { FaShoppingCart } from "react-icons/fa";
 
 const TopNavigation = ({
     isLoggedIn = false,
@@ -62,13 +63,7 @@ const TopNavigation = ({
                     </div>
                 </div>
                 <div className="headerSection">
-                    <div className="cartBackground">
-                        <div className="cartQuantity"><span>0</span></div>
-                        <a className="cardButton">
-                            <FaShoppingCart />
-                        </a>
-                    </div>
-                    <a className="loginButton">Entrar</a>
+                    <Cart />
                 </div>
             </div>
     )

@@ -33,7 +33,6 @@ export const useContactScreen = () => {
                 phone,
                 message
             })
-            //THINGS TO DO: MAKE ERROR
             if(result.status === 400){
                 setShowReturn(true);
                 setReturnType("error")

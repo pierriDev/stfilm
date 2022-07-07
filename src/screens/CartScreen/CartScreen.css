@@ -1,0 +1,26 @@
+.cartSection{
+    padding: 200px 150px 0 150px !important;
+}
+.cartTable{
+    width: 100%;
+}
+.tableHeader{
+    color: #FAA61C;
+    font-weight: 800;
+    font-size: 32px;
+}
+.cartBodyGray{
+    background-color: #d2d2d2;
+}
+.tableColumn{
+    justify-content: center;
+    align-items: center;
+}
+.cartBody__btn{
+    padding: 10px;
+    color: #e92D00;
+}
+.tableText{
+    width: 100%;
+    text-align: center;
+}
